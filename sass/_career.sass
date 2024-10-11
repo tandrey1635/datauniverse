@@ -1,0 +1,277 @@
+.career
+    position: relative
+    padding: 110px 0 80px 0px  
+    @media ( max-width: 991px )
+        padding: 64px 0
+        min-height: 1700px
+    @media ( max-width: 950px )  
+        min-height: 1600px
+    @media ( max-width: 850px )  
+        min-height: 1500px  
+    @media ( max-width: 767px ) 
+        min-height: 1600px
+    @media ( max-width: 480px )
+        min-height: 1500px    
+    @media ( max-width: 425px )   
+        padding: 25px 0
+        min-height: 1400px
+    @media ( max-width: 400px ) 
+        min-height: 1450px    
+    @media ( max-width: 375px )   
+        min-height: 1500px  
+    &::after
+        position: absolute
+        top: 110px
+        right: 0
+        width: 630px
+        height: 425px
+        content: ''
+        background: url('img/career-photo.png') no-repeat center/ cover
+        border-top-left-radius: 80px
+        @media ( max-width: 1300px )  
+            width: 45%
+            background-size: 100% 
+        @media ( max-width: 991px ) 
+            width: 50%
+            height: 20%
+            left: 50%
+            top: auto
+            bottom: 0   
+            transform: translateX(-50%)   
+        @media ( max-width: 850px )  
+            width: 70%
+            height: 20%   
+        @media ( max-width: 576px )  
+            width: 80%  
+        @media ( max-width: 480px ) 
+            height: 15%  
+        @media ( max-width: 375px )  
+            width: 95%        
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @media ( max-width: 991px ) 
+            flex-direction: column
+    &__header
+        font-size: 24px
+        color: $headersSecondColor 
+    &__left, &__right
+        width: 50%     
+        @media ( max-width: 1300px )  
+            width: 48% 
+        @media ( max-width: 950px ) 
+            width: 60%
+        @media ( max-width: 850px )  
+            width: 70%  
+        @media ( max-width: 700px ) 
+            width: 75%      
+        @media ( max-width: 676px ) 
+            width: 80% 
+        @media ( max-width: 610px )   
+            width: 100%  
+    &__subheader
+        width: 500px
+        font-size: 24px
+        line-height: 32px
+        font-weight: 500
+        margin-top: 60px
+        @media ( max-width: 1300px )
+            width: 100%
+        @media ( max-width: 480px )   
+            margin-top: 30px 
+    &__text
+        width: 540px
+        line-height: 32px
+        margin-top: 38px
+        @media ( max-width: 1300px )
+            width: 100%
+        @media ( max-width: 636px ) 
+            margin-top: 30px  
+        @media ( max-width: 425px )   
+            font-size: 14px
+            line-height: 28px
+        &_mt35
+            margin-top: 35px 
+            @media ( max-width: 636px ) 
+                margin-top: 30px
+        &_mt0
+            margin-top: 0           
+    &__block__slider
+        position: relative    
+    &__slider__wrapper
+        margin-top: 80px
+        display: flex
+        justify-content: space-between    
+    &__slider__items
+        position: relative
+        z-index: 5
+        padding: 40px
+        padding-right: 20px
+        width: 100%
+        background: $sliderSecondBg
+        @media ( max-width: 1440px ) 
+            padding: 30px
+        @media ( max-width: 850px )  
+            padding: 20px
+        @media ( max-width: 767px )  
+            width: 90%  
+            padding: 30px
+            margin: 0 auto
+        @media ( max-width: 425px ) 
+            padding: 20px 
+        @media ( max-width: 400px ) 
+            width: 100%       
+        &::after
+            content: ''
+            position: absolute
+            top: 195px
+            left: 10px
+            z-index: -1
+            background: url('img/slider-bg-arrow.svg') no-repeat
+            width: 80px
+            height: 80px
+            @media ( max-width: 1399px )  
+                top: 150px
+    &__slider__top
+        display: flex       
+        align-items: center    
+    &__slider__img
+        width: 150px
+        height: 150px
+        @media ( max-width: 1500px ) 
+            width: 120px
+            height: 120px
+        @media ( max-width: 1400px )  
+            width: 100px
+            height: 100px  
+        @media ( max-width: 850px ) 
+            width: 80px
+            height: 80px  
+        @media ( max-width: 767px ) 
+            width: 120px
+            height: 120px 
+        @media ( max-width: 480px ) 
+            width: 80px
+            height: 80px          
+    &__slider__photo
+        width: 100%
+        height: 100%
+    &__slider__right
+        margin-left: 38px
+        @media ( max-width: 950px )
+            margin-left: 20px
+    &__slider__header
+        font-size: 18px
+        font-weight: 700
+        color: $headersSecondColor 
+    &__slider__text
+        margin-top: 12px
+        font-size: 18px
+        font-weight: 400  
+        @media ( max-width: 375px ) 
+            font-size: 16px  
+    &__bottom
+        margin-top: 40px    
+    &__slider__descriptions
+        width: 101%
+        margin-top: 25px  
+        font-size: 12px
+        line-height: 18px
+        font-weight: 400 
+        @media ( max-width: 1399px )  
+            width: 85%
+        @media ( max-width: 850px )   
+            width: 100% 
+    &__paginations
+        margin-left: 410px
+        width: 230px
+        margin-top: 56px
+        display: flex
+        gap: 5px
+        cursor: pointer
+        @media ( max-width: 1260px )   
+            margin-left: 30px 
+        @media ( max-width: 767px ) 
+            margin: 56px auto 0   
+        @media ( max-width: 525px ) 
+            margin: 36px auto 0      
+        .active
+            background: $btnBorderGradient       
+    &__slider__btn
+        width: 70px
+        height: 2px
+        background: $sliderPaginationBtnBg  
+    &__navigations 
+        width: 100%
+        position: absolute
+        display: flex
+        top: 150px 
+        z-index: 10
+        @media ( max-width: 1600px ) 
+            top: 160px
+        @media ( max-width: 1500px ) 
+            top: 130px   
+        @media ( max-width: 1440px ) 
+            top: 120px
+        @media ( max-width: 1400px )  
+            top: 110px
+        @media ( max-width: 850px )  
+            top: 50%
+        &__left, &__right
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 50px
+            height: 50px   
+            border-radius: 50%
+            cursor: pointer
+            background: $secondBg
+            @media ( max-width: 950px )
+                width: 40px
+                height: 40px
+            @media ( max-width: 767px ) 
+                width: 50px
+                height: 50px 
+            @media ( max-width: 480px )  
+                width: 40px
+                height: 40px       
+            img
+                width: 40px
+                height: 40px
+                @media ( max-width: 950px )
+                    width: 30px
+                    height: 30px
+                @media ( max-width: 767px ) 
+                    width: 40px
+                    height: 40px  
+                @media ( max-width: 480px )  
+                    width: 30px
+                    height: 30px         
+            &:hover
+                opacity: .8
+        &__left  
+            left: 11%  
+            @media ( max-width: 1600px ) 
+                left: 12%
+            @media ( max-width: 1500px ) 
+                left: 15%   
+            @media ( max-width: 950px )
+                left: 14%  
+            @media ( max-width: 850px )  
+                left: 5%
+            @media ( max-width: 767px ) 
+                left: 10% 
+            @media ( max-width: 400px ) 
+                left: 1%       
+        &__right   
+            right: 5% 
+            @media ( max-width: 767px ) 
+                right: 8%
+            @media ( max-width: 400px ) 
+                right: 1%    
+            img
+                transform: rotate(-180deg)               
+             
+

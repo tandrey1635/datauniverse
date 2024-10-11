@@ -1,0 +1,87 @@
+.btn
+    padding: 15px
+    margin-top: 58px
+    width: 200px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 14px
+    color: $mainBtnColor
+    border: 1px solid $mainBorder
+    border-image: $btnBorderGradient
+    border-image-slice: 1
+    cursor: pointer 
+    transition: .8s
+    &:hover
+        transition: .8s
+        background: $btnBorderGradient
+
+
+.promo__btn
+    @media ( max-width: 700px )
+        display: none
+
+.who__we
+    &__btn    
+        padding: 15px 35px
+        width: 214px
+        margin-top: 48px 
+    &__link
+        color: $defaultBtnColor
+        font-weight: 600 
+        font-size: 14px  
+    &__btn:hover &__link
+        color: $mainBtnColor     
+
+
+.career    
+    &__btn
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 52px
+        padding: 15px
+        width: 230px  
+        font-size: 14px
+        font-weight: 700
+    &__link
+        color: $defaultBtnColor 
+    &__btn:hover &__link
+        color: $mainBtnColor
+
+
+.contacts
+    &__btn
+        margin-top: 58px
+        width: 150px 
+        font-weight: 700
+        color: $defaultBtnColor
+        transition: none
+        @media ( max-width: 991px )
+            margin: 58px auto 0
+        &:hover
+            color: $mainBtnColor 
+            transition: none
+
+
+.arrow__up    
+    display: none
+    position: fixed
+    bottom: 30px
+    right: 15px
+    width: 50px
+    height: 50px
+    border: none
+    border-radius: 50%
+    background: $btnBorderGradient
+    transition: none
+    z-index: 15
+    img
+        width: 150%
+        height: 150%
+        transform: rotate(90deg)
+    &:hover
+        transition: none
+        opacity: .7
+.active
+    display: flex        

@@ -1,0 +1,84 @@
+.contacts
+    padding: 100px 0 58px 0
+    background: $contactsBg
+    @media ( max-width: 991px )
+        padding: 64px 0
+    @media ( max-width: 480px )    
+        padding: 25px 0  
+    &__wrapper
+        display: flex
+        justify-content: space-between    
+        align-items: center
+        @media ( max-width: 991px )
+            flex-direction: column
+            gap: 50px
+    &__left
+        width: 50%
+        @media ( max-width: 991px )
+            width: 80%
+            text-align: center
+        @media ( max-width: 676px )   
+            width: 100%   
+    &__right
+        width: 40%
+        @media ( max-width: 1024px )
+            width: 45%
+        @media ( max-width: 991px )
+            width: 50%    
+        @media ( max-width: 850px )   
+            width: 60% 
+        @media ( max-width: 767px )  
+            width: 80%  
+        @media ( max-width: 576px )   
+            width: 100%         
+    &__form
+        display: flex
+        flex-direction: column            
+    &__btn
+        transition: .8s
+        &:hover
+            transition: .8s  
+    &__header
+        font-size: 36px  
+        font-weight: 400 
+        line-height: 52px   
+        @media ( max-width: 767px )  
+            font-size: 32px
+            line-height: 42px  
+        @media ( max-width: 576px )  
+            font-size: 28px   
+        @media ( max-width: 480px ) 
+            font-size: 26px
+            line-height: 32px    
+        @media ( max-width: 375px )
+            font-size: 24px
+    &__text, &__link
+        color: $contactsLink 
+        font-size: 14px
+        @media ( max-width: 991px )
+            display: block
+    &__text
+        margin-top: 24px
+        width: 75%   
+        @media ( max-width: 991px )
+            width: 100%
+            margin: 24px auto 0
+            text-align: center
+    &__input
+        padding: 10px 15px
+        border: none
+        font-size: 14px 
+        font-weight: 400 
+        background: $contactsBg  
+        border-bottom: 2px solid $contactsBorder
+        &:not(:first-child)
+           margin-top: 42px 
+        &::placeholder 
+            font-size: 14px   
+            color: $contactsTextPlaceholder 
+    &__link
+        transition: .8s
+        text-decoration: underline
+        &:hover
+            transition: .8s 
+            opacity: .7               

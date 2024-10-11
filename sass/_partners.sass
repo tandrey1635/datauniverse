@@ -1,0 +1,57 @@
+.partners
+    position: relative
+    min-height: 450px
+    padding: 80px 0
+    overflow: hidden
+    z-index: 10
+    @media ( max-width: 991px )
+        padding: 64px 0
+    @media ( max-width: 425px )  
+        padding: 25px 0  
+    &__wrapper
+        margin-top: 60px
+        display: flex
+        justify-content: space-between
+    &__header
+        max-width: 1124px
+        margin: 0 auto
+        width: 100%
+        font-size: 24px    
+        color: $headersSecondColor
+        @media ( max-width: 1260px )
+            max-width: 100%
+            padding: 0 15px
+    &__items
+        display: flex
+        justify-content: center
+        align-items: center
+        width: auto
+        height: 50px
+        filter: grayscale(1)
+        @media ( max-width: 375px ) 
+            margin: 0 auto
+        &:hover
+            filter: grayscale(0)
+            cursor: pointer
+    &__photo  
+        object-fit: contain                
+    &__paginations
+        max-width: 1124px
+        margin: 100px auto 0
+        width: 100%
+        display: flex
+        gap: 5px
+        cursor: pointer
+        @media ( max-width: 1260px )
+            max-width: 100%
+            padding: 0 15px
+        @media ( max-width: 767px )
+            justify-content: center   
+        .paginations__btn
+            width: 70px
+            height: 2px
+            background: $sliderPaginationBtnBg
+            &:hover
+                opacity: .5
+        .active
+            background: $btnBorderGradient

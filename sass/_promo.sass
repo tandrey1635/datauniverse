@@ -1,0 +1,120 @@
+.promo
+    padding: 90px 0 24px 0
+    min-height: 100vh
+    background: $mainBg
+    @media ( max-width: 991px )
+        padding: 50px 0
+        min-height: auto
+    @media ( max-width: 700px )
+        padding: 25px 0         
+    &__wrapper  
+        position: relative
+        display: flex
+        align-items: center
+        min-height: 640px
+        height: 640px
+        background: url('img/DU-graphics-main.png') no-repeat center right/ contain
+        @media ( max-width: 950px )
+            background-size: 70%  
+        @media ( max-width: 600px )    
+            min-height: 600px 
+            height: auto
+        @media ( max-width: 576px )   
+            min-height: 480px 
+        @media ( max-width: 480px )     
+            min-height: 425px 
+        @media ( max-width: 425px )  
+            background-size:  cover   
+        @media ( max-width: 400px ) 
+            min-height: 400px  
+        @media ( max-width: 375px ) 
+            min-height: 375px     
+        @media ( max-width: 360px ) 
+            min-height: 360px          
+    &__scroll
+        display: flex
+        width: 60px
+        height: 105px
+        position: absolute
+        right: 25px
+        bottom: 60px
+        @media ( max-width: 850px )
+            width: 50px
+            height: 90px
+            right: 15px
+            bottom: 80px
+        @media ( max-width: 767px )
+            bottom: 15%   
+            right: 1%  
+        @media ( max-width: 700px )
+            width: 50px
+            height: 70px     
+            bottom: 20%    
+        @media ( max-width: 576px ) 
+            bottom: 15%    
+        @media ( max-width: 550px ) 
+            bottom: 18%    
+        @media ( max-width: 425px ) 
+            bottom: 5%    
+    &__link-scroll
+        position: relative
+        width: inherit
+        height: inherit
+        &::after
+            position: absolute
+            content: ''   
+            background: url('img/mouse-down.svg') no-repeat center
+            width: inherit
+            height: inherit
+            top: 0
+            left: 0
+    &__left
+        width: 60% 
+        @media ( max-width: 1260px )
+            width: 70%    
+        @media ( max-width: 1110px )
+            width: 75%     
+        @media ( max-width: 1024px )
+            width: 80%  
+        @media ( max-width: 991px )
+            width: 70%   
+        @media ( max-width: 950px )
+            width: 80%    
+        @media ( max-width: 850px )
+            width: 90%    
+        @media ( max-width: 767px )
+            width: 80%   
+        @media ( max-width: 730px ) 
+            width: 65%   
+        @media ( max-width: 676px )  
+            width: 75%     
+        @media ( max-width: 600px ) 
+            width: 80%    
+        @media ( max-width: 550px )  
+            width: 85%   
+        @media ( max-width: 480px ) 
+            width: 95%     
+        @media ( max-width: 425px )     
+            width: 100%         
+    &__header
+        margin-top: 40px
+        font-weight: 300
+        font-size: 64px
+        line-height: 150%
+        color: $headersMainColor
+        @media ( max-width: 991px )
+            font-size: 56px
+        @media ( max-width: 767px )
+            font-size: 48px   
+        @media ( max-width: 730px )     
+            font-size: 36px   
+        @media ( max-width: 576px ) 
+            margin-top: 0  
+        @media ( max-width: 525px )   
+            font-size: 32px 
+        @media ( max-width: 425px ) 
+            font-size: 30px  
+        @media ( max-width: 375px ) 
+            font-size: 28px         
+        @media ( max-width: 360px ) 
+            font-size: 26px 
