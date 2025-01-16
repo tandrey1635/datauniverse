@@ -164,6 +164,7 @@ section {
   display: none;
 }
 .header .active__line:last-child {
+  top: 1px;
   transform: rotate(-45deg);
 }
 .header__wrapper {
