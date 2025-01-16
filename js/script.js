@@ -4,8 +4,7 @@ for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener('click', function (e) {
         e.preventDefault();
         header.classList.remove('active')
-        rotateBurgerBtn()
-
+        
         document.body.style.overflow = ''
 
         const id = smoothLink.getAttribute('href');
@@ -24,6 +23,7 @@ for (let smoothLink of smoothLinks) {
 const header = document.querySelector('.header__wrapper')
 const headerBtn = document.querySelector('.header__btn')
 const headerBtnLine = document.querySelectorAll('.header__line')
+const headerList = document.querySelectorAll('.header__list')
 
 
 function rotateBurgerBtn() {
@@ -33,10 +33,10 @@ function rotateBurgerBtn() {
 }
 
 
-
 headerBtn.addEventListener('click', ()=>{
     header.classList.toggle('active')
     rotateBurgerBtn()
+
 
     if (header.classList.contains('active')) {
         document.body.style.overflow = 'hidden'
@@ -44,6 +44,13 @@ headerBtn.addEventListener('click', ()=>{
     else{
         document.body.style.overflow = ''
     }
+})
+
+
+headerList.forEach(headerList=>{
+    headerList.addEventListener('click', ()=>{
+        rotateBurgerBtn()
+    })
 })
 
 
