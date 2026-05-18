@@ -95,6 +95,10 @@ section {
   }
 }
 
+.owl-nav {
+  display: none;
+}
+
 .header {
   position: relative;
   padding: 32px 0;
@@ -727,12 +731,19 @@ section {
   font-weight: 700;
   font-size: 24px;
 }
+.services__accordeon {
+  position: relative;
+  border-bottom: 2px solid #e1e1e1;
+}
+.services__accordeon:first-child {
+  margin-top: 34px;
+  border-top: 2px solid #e1e1e1;
+}
 .services__items {
   min-height: 120px;
   position: relative;
   display: flex;
   padding: 25px;
-  border-bottom: 2px solid #e1e1e1;
   cursor: pointer;
 }
 @media (max-width: 991px) {
@@ -746,26 +757,47 @@ section {
     padding: 15px;
   }
 }
-.services__items:first-child {
-  margin-top: 34px;
-  border-top: 2px solid #e1e1e1;
+.services__items-right {
+  width: 48%;
 }
-.services__items-left {
-  margin-right: 75px;
-}
-@media (max-width: 991px) {
-  .services__items-left {
-    margin-right: 0;
+@media (max-width: 1024px) {
+  .services__items-right {
+    width: 100%;
+    padding: 0 25px;
   }
 }
-.services .active {
+.services .description-active {
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  z-index: 10;
+}
+@media (max-width: 1024px) {
+  .services .description-active {
+    position: static;
+  }
+}
+.services__description {
+  display: none;
+  gap: 32px;
+}
+@media (max-width: 1024px) {
+  .services__description {
+    flex-direction: column-reverse;
+  }
+}
+.services .accordeon-active {
   display: flex;
 }
 .services__img {
-  display: none;
-  margin-top: 42px;
+  margin-bottom: 42px;
   width: 485px;
   height: 270px;
+}
+@media (max-width: 1024px) {
+  .services__img {
+    margin-bottom: 32px;
+  }
 }
 @media (max-width: 576px) {
   .services__img {
@@ -801,8 +833,15 @@ section {
     font-size: 14px;
   }
 }
+.services .header-active {
+  width: 48%;
+}
+@media (max-width: 1024px) {
+  .services .header-active {
+    width: 100%;
+  }
+}
 .services__items__text {
-  display: none;
   font-size: 14px;
   line-height: 150%;
 }
@@ -1488,16 +1527,6 @@ section {
     height: 185px;
   }
 }
-@media (max-width: 676px) {
-  .projects__link {
-    height: 185px;
-  }
-}
-@media (max-width: 675px) {
-  .projects__link {
-    height: 295px;
-  }
-}
 @media (max-width: 636px) {
   .projects__link {
     height: 275px;
@@ -1636,7 +1665,7 @@ section {
     top: 42%;
   }
 }
-@media (max-width: 675px) {
+@media (max-width: 676px) {
   .projects__navigations__left, .projects__navigations__right {
     top: 45%;
   }
@@ -1699,6 +1728,11 @@ section {
 @media (max-width: 991px) {
   .partners {
     padding: 64px 0;
+  }
+}
+@media (max-width: 767px) {
+  .partners {
+    min-height: 300px;
   }
 }
 @media (max-width: 425px) {
@@ -2032,6 +2066,11 @@ section {
     width: 100%;
   }
 }
+@media (max-width: 767px) {
+  .location__text {
+    margin-top: 32px;
+  }
+}
 .location__info {
   margin-top: 28px;
 }
@@ -2043,13 +2082,13 @@ section {
   opacity: 0.5;
 }
 
-/* черно-белая карта и цветной маркер */  
-/* либо это */  
+/* черно-белая карта и цветной маркер */
+/* либо это */
 .ymaps-2-1-79-ground-pane, .ymaps-2-1-79-gototaxi, .ymaps-2-1-79-gotoymaps, .ymaps-2-1-79-gototech, .ymaps-2-1-79-copyright__link {
   filter: grayscale(1);
 }
 
-/* либо это */ 
+/* либо это */
 [class*=ymaps-2-1][class*=-ground-pane], [class*=ymaps-2-1][class*=-gototaxi], [class*=ymaps-2-1][class*=-gotoymaps], [class*=ymaps-2-1][class*=-gototech], [class*=ymaps-2-1][class*=-copyright__link] {
   filter: grayscale(1);
 }

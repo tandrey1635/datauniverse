@@ -4,7 +4,7 @@ for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener('click', function (e) {
         e.preventDefault();
         header.classList.remove('active')
-        
+
         document.body.style.overflow = ''
 
         const id = smoothLink.getAttribute('href');
@@ -19,7 +19,6 @@ for (let smoothLink of smoothLinks) {
 
 
 // Шапка
-
 const header = document.querySelector('.header__wrapper')
 const headerBtn = document.querySelector('.header__btn')
 const headerBtnLine = document.querySelectorAll('.header__line')
@@ -56,33 +55,46 @@ headerList.forEach(headerList=>{
 
 
 // Аккордеон
-const accordeonItems = document.querySelectorAll('.services__items')
+const showAllAccordeon = (selectorWrapper, parentSelector) => {
+    const accordeonWrapper = document.querySelector(selectorWrapper)
+	if (!accordeonWrapper) return
 
-accordeonItems.forEach(accordeonItem =>{
-    accordeonItem.addEventListener('click', ()=>{
-        accordeonItem.firstElementChild.lastElementChild.classList.toggle('active')
-        accordeonItem.firstElementChild.nextElementSibling.firstElementChild.classList.toggle('active')
-        if (accordeonItem.firstElementChild.lastElementChild.classList.contains('active')) {
-            accordeonItem.lastElementChild.setAttribute('src', 'img/minus.svg')
-            accordeonItem.lastElementChild.setAttribute('alt', 'minus')
-        }
-        else{
-            accordeonItem.lastElementChild.setAttribute('src', 'img/plus.svg')
-        }
+    accordeonWrapper.addEventListener('click', (e)=> {
+		const accordeonItem = e.target.closest(parentSelector)
+		if (!accordeonItem) return
+		const accordeonDescription = accordeonItem.nextElementSibling
+		if (!accordeonDescription) return
+
+		const accordeonHeader = accordeonItem.firstElementChild
+		const accordeonImg = accordeonHeader.nextElementSibling
+		const accordeonText = accordeonDescription.lastElementChild
+
+		
+		accordeonDescription.classList.toggle('accordeon-active')
+		accordeonHeader.classList.toggle('header-active')
+		accordeonText.classList.toggle('description-active')
+
+		if(accordeonDescription.classList.contains('accordeon-active')) {
+			accordeonImg.setAttribute('src', 'img/minus.svg')
+		}
+
+		else {
+			accordeonImg.setAttribute('src', 'img/plus.svg')
+		}
     })
-    
-})
+}
 
+showAllAccordeon('.services__wrapper', '.services__items')
 
 
 
 // Яндекс карта
 function init(){
-    
+
     let myMap = new ymaps.Map('map', {
         center: [55.7835984, 37.56021351793026],
         zoom: 14,
-        controls: ['zoomControl', 'geolocationControl', 'typeSelector', 'fullscreenControl', 'geolocationControl', 'searchControl'] 
+        controls: ['zoomControl', 'geolocationControl', 'typeSelector', 'fullscreenControl', 'geolocationControl', 'searchControl']
     });
 
     const elementsControl = (elementControl) => {
@@ -101,7 +113,7 @@ function init(){
         },
     });
 
-    myMap.geoObjects.add(myGeoObject); 
+    myMap.geoObjects.add(myGeoObject);
 
 
     let myPlacemark = new ymaps.Placemark([55.7835984, 37.56021351793026], {
@@ -114,7 +126,7 @@ function init(){
 
     myMap.geoObjects.add(myPlacemark)
 
-}    
+}
 
 ymaps.ready(init);
 

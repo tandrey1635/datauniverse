@@ -11,7 +11,7 @@
         padding: 0
         min-height: 80px
         border-bottom: 3px solid $mainBorder
-    @media ( max-width: 375px )  
+    @media ( max-width: 375px )
         min-height: 60px
     &__btn
         position: absolute
@@ -20,37 +20,37 @@
         display: none
         width: 50px
         height: 50px
-        @media ( max-width: 991px ) 
-            display: flex  
+        @media ( max-width: 991px )
+            display: flex
             justify-content: space-evenly
             align-items: center
             flex-direction: column
         @media ( max-width: 991px )
             width: 40px
             height: 40px
-        @media ( max-width: 375px ) 
-            top: 10px    
-    &__line  
+        @media ( max-width: 375px )
+            top: 10px
+    &__line
         position: relative
         width: 100%
         height: 3px
         background: $secondBg
         @media ( max-width: 425px )
             width: 80%
-    .active__line    
+    .active__line
         &:first-child
             position: absolute
             top: 20px
             transform: rotate(45deg)
         &:nth-child(2)
-            display: none   
+            display: none
         &:last-child
             top: 1px
             transform: rotate(-45deg)
     &__wrapper
         display: flex
         justify-content: space-between
-        align-items: center 
+        align-items: center
         @media ( max-width: 991px )
             visibility: hidden
             padding: 15px 0
@@ -66,26 +66,25 @@
             background: $mainBg
             transition: 0.5s all
     .active
-        visibility: visible 
+        visibility: visible
         top: 80px
-        transition: 0.5s all 
-        @media ( max-width: 375px ) 
-            top: 60px 
+        transition: 0.5s all
+        @media ( max-width: 375px )
+            top: 60px
     &__logo
         width: 182px
-        height: 65px     
+        height: 65px
     &__menu
         display: flex
         justify-content: space-between
-        align-items: center  
+        align-items: center
         gap: 46px
         @media ( max-width: 991px )
             flex-direction: column
     &__link
         color: $headerLink
-        font-weight: 500 
+        font-weight: 500
         padding-bottom: 5px
         border-bottom: 2px solid transparent
         &:hover
             border-bottom: 2px solid $mainBorder
-            

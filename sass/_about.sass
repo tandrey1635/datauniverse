@@ -5,18 +5,18 @@
     position: relative
     z-index: 10
     overflow: hidden
-    @media ( max-width: 991px ) 
+    @media ( max-width: 991px )
         padding: 64px 0
-    @media ( max-width: 425px )    
-        padding: 25px 0 
+    @media ( max-width: 425px )
+        padding: 25px 0
     &__background
         width: 300px
         height: 600px
         top: 28%
         right: -310px
         background: $aboutBackgroundTriniagle
-        transform: rotate(315deg) scale(1.5)   
-        @media ( max-width: 480px ) 
+        transform: rotate(315deg) scale(1.5)
+        @media ( max-width: 480px )
             height: 500px
     &__wrapper
         display: grid
@@ -25,26 +25,26 @@
         @media ( max-width: 991px )
             grid-template: repeat(4, 1fr) / .5fr
             place-content: center
-        @media ( max-width: 950px )  
-            grid-template: repeat(4, 1fr) / .8fr  
-        @media ( max-width: 767px )  
-            grid-template: repeat(4, 1fr) / 1fr   
-        @media ( max-width: 480px ) 
-            gap: 80px 
-        @media ( max-width: 425px ) 
-            gap: 60px           
+        @media ( max-width: 950px )
+            grid-template: repeat(4, 1fr) / .8fr
+        @media ( max-width: 767px )
+            grid-template: repeat(4, 1fr) / 1fr
+        @media ( max-width: 480px )
+            gap: 80px
+        @media ( max-width: 425px )
+            gap: 60px
     &__items
-        display: flex    
+        display: flex
     &__left-items
-        margin-right: 40px  
-        @media ( max-width: 576px ) 
-            margin-right: 20px  
-        @media ( max-width: 375px ) 
-            margin-right: 5px           
+        margin-right: 40px
+        @media ( max-width: 576px )
+            margin-right: 20px
+        @media ( max-width: 375px )
+            margin-right: 5px
     &__img
         width: 75px
-        height: 75px    
-        @media ( max-width: 425px ) 
+        height: 75px
+        @media ( max-width: 425px )
             width: 60px
             height: 60px
     &__header, &__text
@@ -52,10 +52,10 @@
         color: $headersMainColor
     &__header
         font-weight: 500
-        width: 280px 
+        width: 280px
         line-height: 36px
     &__text
-        margin-top: 42px 
-        font-size: 14px  
+        margin-top: 42px
+        font-size: 14px
         line-height: 24px
         color: $mainTextColor

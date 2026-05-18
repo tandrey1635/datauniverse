@@ -24,8 +24,7 @@ $('.clients__slider').owlCarousel({
             items: 5
         },
     },
-    
-})  
+});
 
 // Пагинация клиенты
 let owlClients = $('.clients__slider');
@@ -57,8 +56,7 @@ $('.career__slider').owlCarousel({
             items: 3
         }
     },
-    
-})
+});
 
 
 // Навигация секция карьера
@@ -66,11 +64,11 @@ let owlCareerNavigations = $('.career__slider');
 owlCareerNavigations.owlCarousel();
 $('.career__navigations__right').click(function() {
     owlCareerNavigations.trigger('next.owl.carousel');
-})
+});
 
 $('.career__navigations__left').click(function() {
     owlCareerNavigations.trigger('prev.owl.carousel', [300]);
-})
+});
 
 
 // Пагинация секция карьера
@@ -81,7 +79,6 @@ $('.career__slider__btn').click(function() {
     // если нужно ставим тут класс .active элементу по которому кликнули и снимаем у остальных
     owlCareerPaginations.trigger('to.owl.carousel', [position, 500]);
 });
-
 
 
 
@@ -107,8 +104,7 @@ $('.projects__slider').owlCarousel({
             items: 4,
         },
     },
-    
-})
+});
 
 
 // Навигация секция проекты
@@ -116,11 +112,11 @@ let owlProjectNavigations = $('.projects__slider');
 owlProjectNavigations.owlCarousel();
 $('.projects__navigations__right').click(function() {
     owlProjectNavigations.trigger('next.owl.carousel');
-})
+});
 
 $('.projects__navigations__left').click(function() {
     owlProjectNavigations.trigger('prev.owl.carousel', [300]);
-})
+});
 
 
 // Пагинация секция проекты
@@ -158,10 +154,8 @@ $('.partners__slider').owlCarousel({
         991: {
             items: 5
         },
-
     },
-    
-}) 
+});
 
 // Пагинация партнеры
 let owlPartners = $('.partners__slider');
