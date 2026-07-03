@@ -36,7 +36,6 @@ $('.clients__btn').click(function() {
 });
 
 
-
 // Cекция карьера
 $('.career__slider').owlCarousel({
     loop: true,
@@ -129,7 +128,6 @@ $('.projects__btn').click(function() {
 });
 
 
-
 // Секция партнеры
 $('.partners__slider').owlCarousel({
     loop: true,
@@ -156,6 +154,7 @@ $('.partners__slider').owlCarousel({
         },
     },
 });
+
 
 // Пагинация партнеры
 let owlPartners = $('.partners__slider');

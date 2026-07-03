@@ -55,7 +55,7 @@ headerList.forEach(headerList=>{
 
 
 // Аккордеон
-const showAllAccordeon = (selectorWrapper, parentSelector) => {
+function showAllAccordeon (selectorWrapper, parentSelector) {
     const accordeonWrapper = document.querySelector(selectorWrapper)
 	if (!accordeonWrapper) return
 
@@ -69,7 +69,7 @@ const showAllAccordeon = (selectorWrapper, parentSelector) => {
 		const accordeonImg = accordeonHeader.nextElementSibling
 		const accordeonText = accordeonDescription.lastElementChild
 
-		
+
 		accordeonDescription.classList.toggle('accordeon-active')
 		accordeonHeader.classList.toggle('header-active')
 		accordeonText.classList.toggle('description-active')
@@ -87,10 +87,8 @@ const showAllAccordeon = (selectorWrapper, parentSelector) => {
 showAllAccordeon('.services__wrapper', '.services__items')
 
 
-
 // Яндекс карта
 function init(){
-
     let myMap = new ymaps.Map('map', {
         center: [55.7835984, 37.56021351793026],
         zoom: 14,
@@ -129,7 +127,6 @@ function init(){
 }
 
 ymaps.ready(init);
-
 
 
 // Стрелка вверх
